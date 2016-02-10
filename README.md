@@ -17,6 +17,9 @@ You can require XML data like this:
 ``` javascript
 var data = require('xml!./data.xml');
 // => returns data.xml content as json-parsed object
+
+var data = require('xml?explicitChildren=true!./data.xml');
+// => returns data.xml content as json-parsed object and put child elements to separate property
 ```
 
 The loader will translate the ```data.xml``` file into a JSON Object.
