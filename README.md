@@ -17,9 +17,12 @@ You can require XML data like this:
 ``` javascript
 var data = require('xml!./data.xml');
 // => returns data.xml content as json-parsed object
+
+var data = require('xml?explicitChildren=true!./data.xml');
+// => returns data.xml content as json-parsed object and put child elements to separate properties
 ```
 
-The loader will translate the ```data.xml``` file into a JSON Object.
+The loader will translate the ```data.xml``` file into a JSON Object. [node-xml2js processors](https://github.com/Leonidas-from-XIV/node-xml2js#options) are supported via query syntax.
 
 #### Usage with webpack.config
 
