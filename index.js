@@ -3,12 +3,25 @@
         Author Kevin Gisi @cheerskevin
 */
 
+var loaderUtils = require('loader-utils');
 var parseString = require('xml2js').parseString;
+var processors = require('xml2js/lib/processors');
 
 module.exports = function(text) {
   this.cacheable && this.cacheable();
+  var options = loaderUtils.parseQuery(this.query);
+
+  Object.keys(options).forEach(function(key) {
+    if (key.indexOf('Processors') > -1) {
+      var array = options[key];
+      for (var i = 0, len = array.length; i < len; i++) {
+        array[i] = processors[array[i]];
+      }
+    }
+  });
+
   var self = this;
-  parseString(text, function(err, result) {
+  parseString(text, options, function(err, result) {
     self.callback(err, !err && "module.exports = " + JSON.stringify(result));
   });
 };

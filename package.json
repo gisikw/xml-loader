@@ -1,10 +1,11 @@
 {
   "name": "xml-loader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A webpack module to load XML files.",
   "main": "index.js",
   "dependencies": {
-    "xml2js": "^0.4.9"
+    "xml2js": "^0.4.16",
+    "loader-utils": "0.2.x"
   },
   "devDependencies": {},
   "repository": {

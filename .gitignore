@@ -1,3 +1,10 @@
+~*
+*.iml
+*.tlog
+*.log
+.classpath
+.DS_Store
+.idea/
 test
 node_modules
 npm-debug.log
