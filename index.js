@@ -9,7 +9,7 @@ var processors = require('xml2js/lib/processors');
 
 module.exports = function(text) {
   this.cacheable && this.cacheable();
-  var options = loaderUtils.parseQuery(this.query);
+  var options = loaderUtils.getOptions(this);
 
   Object.keys(options).forEach(function(key) {
     if (key.indexOf('Processors') > -1) {
