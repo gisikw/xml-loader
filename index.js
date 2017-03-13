@@ -11,14 +11,16 @@ module.exports = function(text) {
   this.cacheable && this.cacheable();
   var options = loaderUtils.getOptions(this);
 
-  Object.keys(options).forEach(function(key) {
-    if (key.indexOf('Processors') > -1) {
-      var array = options[key];
-      for (var i = 0, len = array.length; i < len; i++) {
-        array[i] = processors[array[i]];
+  if(options) {
+    Object.keys(options).forEach(function(key) {
+      if (key.indexOf('Processors') > -1) {
+        var array = options[key];
+        for (var i = 0, len = array.length; i < len; i++) {
+          array[i] = processors[array[i]];
+        }
       }
-    }
-  });
+    });
+  }
 
   var self = this;
   parseString(text, options, function(err, result) {
