@@ -7,34 +7,32 @@ A Webpack plugin for loading XML files.
 Install via npm:
 
 ```
-npm install --save xml-loader
+npm install --save-dev xml-loader
 ```
 
 ## Usage
 
-You can require XML data like this:
+To require XML files like this: ```import 'data.xml'```, you can add the xml-loader to your webpack config:
 
-``` javascript
-var data = require('xml!./data.xml');
-// => returns data.xml content as json-parsed object
-
-var data = require('xml?explicitChildren=true!./data.xml');
-// => returns data.xml content as json-parsed object and put child elements to separate properties
-```
-
-The loader will translate the ```data.xml``` file into a JSON Object. [node-xml2js processors](https://github.com/Leonidas-from-XIV/node-xml2js#options) are supported via query syntax.
-
-#### Usage with webpack.config
-
-To require XML files like this: ```require('data.xml')``` , you can add the xml-loader to your webpack config:
-
-``` javascript
+```javascript
 module : {
   loaders : [
-    { test: /\.xml$/, loader: 'xml-loader' } // will load all .xml files with xml-loader by default
-  ]
-}
+    {
+      test: /\.xml$/,
+      use: {
+        loader: 'xml-loader',
+        options: {
+          explicitArray: false,
+        },
+      },
+    },
+  ],
+},
 ```
+
+#### Options
+
+It is not required to provide any options, but options can be any of the [xml2js parser options](https://github.com/Leonidas-from-XIV/node-xml2js#options).
 
 ## Credits
 
