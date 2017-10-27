@@ -13,7 +13,8 @@ npm install --save-dev xml-loader
 ## Usage
 
 Add the loader to your webpack config:
-(You may also can pass any of the [xml2js parser options](https://github.com/Leonidas-from-XIV/node-xml2js#options) in an object.)
+
+(You may also pass any of the [xml2js parser options](https://github.com/Leonidas-from-XIV/node-xml2js#options) in an object.)
 
 ```javascript
 module : {
