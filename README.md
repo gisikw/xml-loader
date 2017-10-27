@@ -12,7 +12,8 @@ npm install --save-dev xml-loader
 
 ## Usage
 
-To require XML files like this: ```import 'data.xml'```, you can add the xml-loader to your webpack config:
+Add the loader to your webpack config:
+(You may also can pass any of the [xml2js parser options](https://github.com/Leonidas-from-XIV/node-xml2js#options) in an object.)
 
 ```javascript
 module : {
@@ -29,10 +30,6 @@ module : {
   ],
 },
 ```
-
-#### Options
-
-It is not required to provide any options, but options can be any of the [xml2js parser options](https://github.com/Leonidas-from-XIV/node-xml2js#options).
 
 ## Credits
 
