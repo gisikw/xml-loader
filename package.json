@@ -4,10 +4,13 @@
   "description": "A webpack module to load XML files.",
   "main": "index.js",
   "dependencies": {
-    "xml2js": "^0.4.16",
-    "loader-utils": "^1.0.0"
+    "xml2js": "^0.4.19",
+    "loader-utils": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@hydrant/eslint-config": "^1.1.1",
+    "eslint": "^4.9.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gisikw/xml-loader.git"
