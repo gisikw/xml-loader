@@ -33,5 +33,11 @@
   ],
   "bugs": {
     "url": "https://github.com/gisikw/xml-loader/issues"
+  },
+  "eslintConfig": {
+    "extends": "@hydrant/eslint-config/modern",
+    "parserOptions": {
+      "sourceType": "module"
+    }
   }
 }
