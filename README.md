@@ -34,5 +34,6 @@ module : {
 
 ## Credits
 
+* Original idea by [xml-loader](https://github.com/gisikw/xml-loader)
 * Inspired by webpack's [dsv-loader](https://github.com/wbkd/dsv-loader)
 * XML parsing done with [node-xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
