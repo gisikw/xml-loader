@@ -1,6 +1,6 @@
 {
-  "name": "xml-loader",
-  "version": "1.2.1",
+  "name": "webpack-xml-loader",
+  "version": "0.0.1",
   "description": "A webpack module to load XML files.",
   "main": "index.js",
   "dependencies": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gisikw/xml-loader.git"
+    "url": "https://github.com/sebastianwachter/xml-loader"
   },
   "keywords": [
     "webpack",
@@ -21,9 +21,9 @@
     "xml"
   ],
   "author": {
-    "name": "Kevin Gisi",
-    "email": "kevin@kevingisi.com",
-    "web": "http://twitter.com/cheerskevin"
+    "name": "Sebastian Wachter",
+    "email": "sebi.wachter@online.de",
+    "web": "https://subhuman.info"
   },
   "licenses": [
     {
@@ -31,9 +31,6 @@
       "url": "http://opensource.org/licenses/mit-license.html"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/gisikw/xml-loader/issues"
-  },
   "eslintConfig": {
     "extends": "@hydrant/eslint-config/modern",
     "parserOptions": {
